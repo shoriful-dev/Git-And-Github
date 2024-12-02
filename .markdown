@@ -1,0 +1,136 @@
+# Git All Commands
+
+## Check your git version
+
+```
+git --version
+```
+
+## Repository
+git status shows which files are tracked or not tracked.
+
+```
+git status
+```
+## Your config settings
+
+```
+git config --global user.email "your-email@example.com"
+
+git config --global user.name "Your Name
+```
+Now you can check your config settings:
+
+```
+git config --list
+```
+
+## Creating a repository
+
+```
+git init
+```
+
+## git add
+
+```
+git add .
+```
+
+## git commit 
+
+```
+git commit -m "commit message"
+```
+
+# gitignore
+
+```
+node_modules
+
+.env
+
+.vscode
+```
+
+# Creating a New Branch
+
+```
+git branch
+
+git branch bug-fix
+
+git switch bug-fix
+
+git log
+
+git switch master
+
+git switch -c dark-mode
+
+git chackout orange-mode
+```
+Some points to note:
+
+* git branch - This command lists all the branches in the current repository.
+* git branch bug-fix - This command creates a new branch called ```bug-fix```.
+* git switch bug-fix - This command switches to the ```bug-fix``` branch.
+* git log - This command shows the commit history for the current branch.
+* git switch master - This command switches to the ```master``` branch.
+* git switch -c dark-mode - This command creates a new branch called ```dark-mode```. the ```-c``` flag is used to create a new branch.
+* git checkout orange-mode - This command switches to the ```orange-mode``` branch.
+
+## Rename a branch
+You can rename a branch using the following command:
+```
+git branch -m old-branch-name new-branch-name
+```
+
+## Delete a branch
+You can delete a branch using the following command:
+```
+git branch -d branch-name
+```
+
+## Merge a branch
+You can merge a branch using the following command:
+```
+git merge branch-name
+```
+
+## List all branches
+You can list all branches using the following command:
+```
+git branch -a
+```
+
+## Comparing Working Directory and Staging Area
+You can compare the working directory and staging area using the following command:
+```
+git diff
+```
+## Comparing Staging Area and Repository
+You can compare the staging area and repository using the following command:
+```
+git diff --staged
+```
+
+## Comparing Beetween Branches
+You can compare between branches using the following command:
+```
+git diff branch1 branch2
+```
+
+## Comparing Specific Files
+You can compare specific files using the following command:
+```
+git diff file1 file2
+```
+
+## Git Stash
+You can stash changes using the following command:
+```
+git stash
+```
+
+

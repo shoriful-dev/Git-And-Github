@@ -1,0 +1,110 @@
+# Git Configuration
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git config --list  # View all settings
+
+# Initialize a new Git repository
+git init
+
+# Cloning a repository
+git clone <repository-url>
+git clone <repository-url> <directory-name>
+
+# Basic Git workflow
+git status  # Check the status of your working directory
+git add <file>  # Stage a specific file
+git add .  # Stage all changes
+git commit -m "Commit message"  # Commit staged changes
+git push origin <branch-name>  # Push commits to remote repository
+
+# Branching
+git branch  # List all local branches
+git branch <branch-name>  # Create a new branch
+git checkout <branch-name>  # Switch to a branch
+git checkout -b <branch-name>  # Create and switch to a new branch
+git merge <branch-name>  # Merge a branch into the current branch
+git branch -d <branch-name>  # Delete a branch locally
+git push origin --delete <branch-name>  # Delete a remote branch
+
+# Remote repositories
+git remote -v  # List remote repositories
+git remote add <name> <url>  # Add a new remote repository
+git remote remove <name>  # Remove a remote repository
+git fetch <remote>  # Fetch changes from a remote repository
+git pull <remote> <branch>  # Fetch and merge changes from a remote repository
+
+# Viewing changes
+git diff  # Show unstaged changes
+git diff --staged  # Show staged changes
+git log  # View commit history
+git log --oneline  # Compact view of commit history
+git show <commit-hash>  # Show details of a specific commit
+
+# Undoing changes
+git checkout -- <file>  # Discard changes in working directory
+git reset HEAD <file>  # Unstage a file
+git reset --soft HEAD~1  # Undo last commit, keep changes staged
+git reset --hard HEAD~1  # Undo last commit and all changes
+git revert <commit-hash>  # Create a new commit that undoes a previous commit
+
+# Stashing changes
+git stash  # Temporarily store modified, tracked files
+git stash pop  # Apply stored stash and remove it from stash list
+git stash list  # List all stashes
+git stash apply  # Apply stored stash but keep it in the list
+
+# Tagging
+git tag  # List all tags
+git tag -a v1.0 -m "Version 1.0"  # Create an annotated tag
+git push origin --tags  # Push tags to remote repository
+
+# GitHub-specific operations
+# Fork a repository on GitHub (use GitHub web interface)
+# Create a pull request (use GitHub web interface)
+
+# Syncing a fork
+git remote add upstream <original-repo-url>
+git fetch upstream
+git checkout main
+git merge upstream/main
+
+# GitHub Pages
+# Enable GitHub Pages in repository settings
+# Push to gh-pages branch or configure for main branch
+
+# GitHub Actions
+# Create .github/workflows/main.yml for CI/CD pipelines
+
+# GitHub Issues and Projects
+# Use GitHub web interface to create and manage issues and projects
+
+# Best Practices
+# 1. Write clear, concise commit messages
+# 2. Commit often, push regularly
+# 3. Use branches for new features or bug fixes
+# 4. Keep the main branch stable
+# 5. Review code before merging
+# 6. Use .gitignore to exclude unnecessary files
+# 7. Don't commit sensitive information (use environment variables)
+
+# Advanced Git commands
+git rebase <branch>  # Reapply commits on top of another base
+git cherry-pick <commit-hash>  # Apply a specific commit to the current branch
+git bisect start  # Binary search for the commit that introduced a bug
+git reflog  # View the history of HEAD references
+
+# GitHub CLI (gh)
+gh repo create  # Create a new repository
+gh pr create  # Create a pull request
+gh issue create  # Create a new issue
+
+# Git hooks
+# Create scripts in .git/hooks/ for pre-commit, post-commit, etc.
+
+# Git submodules
+git submodule add <repository-url> <path>  # Add a submodule
+git submodule update --init --recursive  # Initialize and update submodules
+
+# Git LFS (Large File Storage)
+git lfs install  # Set up Git LFS
+git lfs track "*.psd"  # Track large files
